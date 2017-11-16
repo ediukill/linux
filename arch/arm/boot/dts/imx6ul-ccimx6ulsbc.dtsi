@@ -222,8 +222,9 @@
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_lcdif_dat0_17
 		     &pinctrl_lcdif_clken>;
-	display = <&f07a0102>;
-	status = "disabled";,
+	display = <&f10a0102>;
+	lcd-supply = <&ldo4_ext>;
+	status = "disabled";
 
 	f07a0102: display@0 {
 		bits-per-pixel = <16>;
@@ -250,21 +251,21 @@
 	};
 
 	f10a0102: display@1 {
-		bits-per-pixel = <16>;
+		bits-per-pixel = <18>;
 		bus-width = <18>;
 
 		display-timings {
 			native-mode = <&timing1>;
 			timing1: timing1 {
-				clock-frequency = <45000000>;
-				hactive = <1024>;
-				vactive = <600>;
-				hfront-porch = <10>;
-				hback-porch = <0>;
-				hsync-len = <136 176 216>;
-				vback-porch = <0>;
-				vfront-porch = <0>;
-				vsync-len = <12 25 38>;
+				clock-frequency = <30000000>;
+				hactive = <800>;
+				vactive = <480>;
+				hfront-porch = <16 210 354>;
+				hback-porch = <46>;
+				hsync-len = <1 20 40>;
+				vback-porch = <23>;
+				vfront-porch = <1 12 77>;
+				vsync-len = <3 10 20>;
 				de-active = <1>;
 				pixelclk-active = <1>;
 			};
