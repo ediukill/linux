@@ -100,9 +100,9 @@
 };
 
 /* CAN2 (multiplexed with UART2 RTS/CTS) */
-// &flexcan2 {
-// 	status = "okay";
-// };
+&flexcan2 {
+ 	status = "okay";
+ };
 
 /* Fusion touch */
 &fusion_touch {
