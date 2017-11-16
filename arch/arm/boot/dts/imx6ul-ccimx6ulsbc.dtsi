@@ -223,7 +223,7 @@
 	pinctrl-0 = <&pinctrl_lcdif_dat0_17
 		     &pinctrl_lcdif_clken>;
 	display = <&f07a0102>;
-	status = "disabled";
+	status = "disabled";,
 
 	f07a0102: display@0 {
 		bits-per-pixel = <16>;
